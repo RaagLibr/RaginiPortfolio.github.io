@@ -8,4 +8,4 @@ Personal Portfolio
 
 #### Home page image
 
-![pro2](https://github.com/RaagLibr/RaginiPortfolio.github.io/assets/101311420/cfc75127-aed8-429c-ae91-743784d52297)
+![pro2](https://github.com/RaagLibr/RaginiPortfolio.github.io/assets/101311420/7c720153-8476-491e-a3ee-0cff061c07a9)
