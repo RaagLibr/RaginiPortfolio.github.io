@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ragini - Portfolio</title>
@@ -12,13 +11,14 @@
 	<link rel="stylesheet" href="portfolio.css" />
 	<link rel="stylesheet" href="jquery.flipster.min.css">
 	<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+<script src="Bootstrap/css/bootstrap.min.js" defer></script>
+<script src="typed.js" defer></script>
 
 	<style>
 		html { font-size: 14px; }
 		body { margin: 0; padding: 0; }
 	</style>
 </head>
-
  <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"
@@ -68,6 +68,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="https://github.com/RaagLibr">Projects</a></li>
                  <li onclick="swal('Please, Contact with developer.');" class="res" style="cursor: pointer;"><a class="res">Resume</a></li>
+            
             <!--	<li><a href="gall.html">Gallary</a></li>
         			<li><a href="about.html">About Me</a></li> -->
         		
@@ -102,7 +103,7 @@
 
 </header>
 
-<div class="Skills">
+<div class="Skills" style="margin-bottom: 10em;">
 		<h1 class="font-effect-3d" style="text-align:center;" data-aos="zoom-out" data-aos-duration="500" data-aos-easing="ease-out">Skills</h1>
 			
 
@@ -153,10 +154,11 @@
 
 </div>
 
+
 	
-	<div class="header1" style="margin-top:2em;">
+	<div class="header1" style="padding-top: 30em;">
 			
-			<h1 class="font-effect-3d" data-aos="zoom-out" data-aos-duration="50" data-aos-easing="ease-out">💎Work <span>GALLERY💎</span></h1>
+			<h1 class="font-effect-3d" data-aos="zoom-out" data-aos-duration="50" data-aos-easing="ease-out">Image <span>GALLERY</span></h1>
 			<div class="gallery-filter">
 				<span class="filter-gallery active" data-filter="all">All </span>
 				<span class="filter-gallery" data-filter="certificates"> certificates</span>
@@ -164,7 +166,7 @@
 				<span class="filter-gallery" data-filter="intern">Internships</span>
 				
 			</div>
-	</div>
+		</div>
 
 		<!--------------------------------------GAllery !--------------------------------------->
 		<div class="ggalry" style="" >
@@ -285,10 +287,10 @@
 		</div>
 
 
-	
 <div class="hero" style="padding-bottom: ;" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-out">
 	<div class="carousel" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-out">
-		<h1 class="font-effect-3d" style="text-align:center;margin: 0px 0px 50px 0px;" data-aos="zoom-out" data-aos-duration="500" data-aos-easing="ease-out">💎Lockdown work💎</h1>
+		<h1 class="font-effect-3d" style="text-align:center;
+		margin-bottom: 1em;" data-aos="zoom-out" data-aos-duration="500" data-aos-easing="ease-out">Lockdown work</h1>
 		<ul>
 			<li><img src="img/g1.jpg" alt=""></li>
 			<li><img src="img/g2.jpg" alt=""></li>
@@ -315,8 +317,6 @@
 	
 
 </body>
-
-
 <script src="Bootstrap/css/bootstrap.min.js"></script>
 <script src="typed.js"></script>
 <script type="text/javascript">
@@ -332,8 +332,6 @@
 
 </script>
 <script type="text/javascript"></script>
-<script src="Bootstrap/css/bootstrap.min.js" async></script>
-<script src="typed.js" defer></script>
 
 <script type="text/javascript">
 //-----------------------------navigation part -------------------//
@@ -359,6 +357,64 @@ hamburger.addEventListener("click", showMenu);
 close.addEventListener("click", hideMenu);
 
 </script>
+
+
+<script src="Bootstrap/css/bootstrap.min.js" async></script>
+<script src="typed.js" defer></script>
+
+
+
+<script type="text/javascript">
+	
+	let  img1= document.querySelector('img');
+	let nav=document.querySelector('nav');
+	let h1=document.querySelector('.h1');
+	let h2g=document.querySelector('.h2g');
+	window.addEventListener('scroll',function(){
+		var value= window.scrollY;
+		img1.style.bottom=value*0.15+'px';
+		nav.style.bottom=value*0.5+'px';
+		h1.style.bottom=value*0.15+'px';
+		h2g.style.bottom=value*90+'px';
+
+	})
+</script>
+
+<script type="text/javascript">
+	const galleryFilter = document.querySelector(".gallery-filter");
+	const galleryImages = document.querySelectorAll(".gimage");
+
+	galleryFilter.addEventListener("click", (e) => {
+		if(e.target.classList.contains("filter-gallery"))
+		{
+			galleryFilter.querySelector(".active").classList.remove("active");
+
+			e.target.classList.add("active");
+
+
+
+			const filter = e.target.dataset.filter;
+
+			galleryImages.forEach((image) => 
+			{
+				if(filter=== "all")
+				{
+					image.style.display = "block";
+				}
+				else if(image.classList.contains(filter))
+				{
+					image.style.display = "block";
+				}
+				else
+				{
+					image.style.display = "none";				
+
+				}
+			})
+		}
+	})
+</script>
+
 
 
 <script src="aos.js"></script>
@@ -407,57 +463,6 @@ btn.on('click', function(e) {
 
   </script>
 
-<script type="text/javascript">
-	const galleryFilter = document.querySelector(".gallery-filter");
-	const galleryImages = document.querySelectorAll(".gimage");
-
-	galleryFilter.addEventListener("click", (e) => {
-		if(e.target.classList.contains("filter-gallery"))
-		{
-			galleryFilter.querySelector(".active").classList.remove("active");
-
-			e.target.classList.add("active");
-
-
-
-			const filter = e.target.dataset.filter;
-
-			galleryImages.forEach((image) => 
-			{
-				if(filter=== "all")
-				{
-					image.style.display = "block";
-				}
-				else if(image.classList.contains(filter))
-				{
-					image.style.display = "block";
-				}
-				else
-				{
-					image.style.display = "none";				
-
-				}
-			})
-		}
-	})
-</script>
-
-	
-<script type="text/javascript">
-	
-	let  img1= document.querySelector('img');
-	let nav=document.querySelector('nav');
-	let h1=document.querySelector('.h1');
-	let h2g=document.querySelector('.h2g');
-	window.addEventListener('scroll',function(){
-		var value= window.scrollY;
-		img1.style.bottom=value*0.15+'px';
-		nav.style.bottom=value*0.5+'px';
-		h1.style.bottom=value*0.15+'px';
-		h2g.style.bottom=value*90+'px';
-
-	})
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
