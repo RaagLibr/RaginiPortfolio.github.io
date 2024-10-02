@@ -5,7 +5,7 @@
 	}
 	html,body
 	{
-	
+	scroll-behavior: smooth;
 		overflow-x: hidden;
 		margin: 0;
 		padding: 0;
@@ -498,7 +498,7 @@ clip-path: polygon(49% 97%, 100% 83%, 100% 0, 0 0, 0 83%);
 
 .hero
 {
-	margin-top: 1em;
+	margin-top: 5em;
 	width: 95%;
 	height: 110vh;
 	overflow: hidden;
@@ -909,7 +909,7 @@ border: 2px red ridge;
 
 		.header1
 		{
-			margin: 0rem 0;
+			margin: 1rem 0;
 			text-align: center;
 			color:black;
 			border-bottom: 1px solid grey;
